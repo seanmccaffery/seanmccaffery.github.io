@@ -1,0 +1,198 @@
+/***************************
+***        General       ***
+***************************/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #FDFDF0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	position: static;
+}
+
+body, .thumb_wrapper {
+	background: url(http://images.anthropologie.com/is/image/Anthropologie/10_13_Lookbook_oct_BG_4?wid=25&hei=25) repeat;
+}
+
+/***************************
+***       Content        ***
+***************************/
+.tip img, .gohome img {
+	position: absolute;
+	z-index: 99;
+	-webkit-backface-visibility: hidden;
+}
+
+.gohome img {
+	height: 17px;
+	width: 105px;
+}
+
+.end {
+	height: 99px;
+	left: 80%;
+	position: absolute;
+	top: 50%;
+	width: 88px;
+	z-index: 99;
+}
+
+#envelope {
+	display: block;
+	max-height: 690px;
+	position: absolute;
+	left: 0;
+	z-index: 1;
+}
+
+#envelope img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+#wrapper {
+	height: 100%;
+}
+
+/* Photo Section */
+.lookbook #slideshow_wrapper {
+	clear: both;
+	height: 100%;
+	width: 100%;
+}
+
+.lookbook #photo {
+	height: auto;
+	overflow: hidden;
+	position: absolute;
+	max-height: 690px;
+	z-index: 10;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	transition: padding-left 0.5s;
+	-webkit-transition: padding-left 0.5s;
+	-webkit-perspective: 1000;
+}
+
+.lookbook #photo img {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.lookbook section {
+	cursor: pointer;
+	float: left;
+	max-height: 690px;
+	position: relative;
+}
+
+.focused {
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	-webkit-perspective: 1000;
+}
+
+.focused, .focused + section, .focused + section + section, .focused + section + section + section {
+	-webkit-backface-visibility: hidden;
+}
+
+.focused-transition {
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: width 0.4s;
+	transition: width 0.4s;
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+.backface-visibility {
+	-webkit-backface-visibility: hidden;
+}
+
+.lookbook .scrollable {
+	-webkit-overflow-scrolling: touch;
+}
+
+.lookbook .prodbox {
+	background-color: #FEFEFA;
+	display: none;
+	position: absolute;
+	text-align: center;
+    top: 0px;
+}
+
+.lookbook .cover {
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+.lookbook .thumb_wrapper {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-right: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.lookbook .thumb_wrapper a {
+    display: block;
+    height: 100%;
+}
+
+.lookbook .thumb {
+	position: relative;
+	max-width: 400px;
+	background-repeat: no-repeat;
+	background-size: cover !important;
+}
+
+/***************************
+***       QuickShop      ***
+***************************/
+#quickshop {
+	left: 0 !important;
+	position: fixed;
+	top: 0 !important;
+	/*width: 300px !important;*/
+}
+
+#detailMain {
+	cursor: default !important;
+}
+
+.an_hitarea, .mojozoom_imgctr {
+	display: none !important;
+}
+
+/*
+#quickshop #column2 {
+	padding: 25px 20px 20px 20px;
+}
+
+#quickshop #column1 {
+	display: none !important;
+} */
+
+#quickshopWrapper {
+	background: none;
+}
+
+/***************************
+***     Media Queries    ***
+***************************/
+
+/*@media screen and (min-width: 1280px) {
+
+}
+*/

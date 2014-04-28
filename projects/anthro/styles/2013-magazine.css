@@ -1,0 +1,652 @@
+/*================================
+		OVERRIDES FROM 2013-WEB.CSS
+==================================*/
+.magazine p {
+	font-size: 13px;
+	letter-spacing: 0;
+	line-height: 1.5em;
+}
+
+
+/*===================
+		DEFAULT STYLES
+=====================*/
+
+.magazine {
+	line-height: normal;
+	margin: 0 auto;
+	padding: 16px 0 0;
+	position: relative;
+	width: 806px;
+}
+
+.magazine-wide {
+	width: 970px;
+}
+
+.magazine-responsive {
+
+}
+
+.magazine q,
+.magazine cite,
+.magazine em {
+	color: inherit;
+	font-size: inherit;
+}
+
+.magazine q {
+	quotes: '\201C' '\201D' '\2018' '\2019';
+}
+
+/*=================
+			HEADER
+===================*/
+
+.magazine header {
+	background: none;
+	border-bottom: 1px solid #ccc;
+	margin: 0 -58px 20px;
+	padding-bottom: 0;
+	zoom: 1;
+}
+
+.magazine .feature-title {
+	border-bottom: 1px solid #999;
+	color: #333;
+	font: normal 26px Georgia, "Times New Roman", Times, serif;
+	margin-bottom: 1px;
+	padding-bottom: 8px;
+	text-align: center;
+	text-transform: none;
+}
+
+.magazine .feature-title .type {
+	color: #999;
+	display: block;
+	font: normal 11px Arial, Helvetica, sans-serif;
+	letter-spacing: .1em;
+	margin: .3em;
+	text-transform: uppercase;
+}
+
+.magazine .feature-title .type::before {
+	content: '{';
+}
+
+.magazine .feature-title .type::after {
+	content: '}';
+}
+
+
+/*=================
+		MAIN CONTENT
+===================*/
+
+#content {
+	padding: 0;
+}
+
+.magazine h2 {
+	color: #6699b0;
+	font: normal 20px/24px Georgia, "Times New Roman", Times, serif;
+	letter-spacing: 0;
+	margin: 1em 0 0;
+	padding: 0;
+}
+
+.magazine hgroup h2 {
+	margin: 0 0 14px;
+}
+
+.magazine .subhead {
+	color: #666;
+	font: bold 13px Arial, Helvetica, sans-serif;
+	letter-spacing: 0;
+	margin: 0;
+	text-transform: none;
+}
+
+.magazine h3 {
+	color: #666;
+	font: normal 16px/24px 'ClarendonBT-Light', Georgia, "Times New Roman", Times, serif;
+	margin-bottom: .2em;
+	text-transform: uppercase;
+}
+
+.magazine h4 {
+	color: #333;
+	font: normal 14px/20px Georgia, "Times New Roman", Times, serif;
+	letter-spacing: .1em;
+	margin: 1em 0 0;
+}
+
+.magazine .body h2 + p,
+.magazine .body h4 + p {
+	margin-top: 0;
+}
+
+.magazine h4.link-heading {
+	color: #999;
+	font: normal 10px Arial, Helvetica, sans-serif;
+	margin: 10px 0 0;
+	text-transform: uppercase;
+}
+
+.magazine h5 {
+	color: #666;
+	float: left;
+	font-size: 1em;
+	margin: 0 3px 0 0;
+}
+
+.magazine .fullimage {
+	width: 100%;
+	max-width: 1280px;
+}
+
+.magazine .sidebar {
+	float: right;
+	font: normal 12px/18px Georgia, "Times New Roman", Times, serif;
+	width: 250px;
+}
+
+.magazine .sidebar h3 {
+	color: #333;
+	font: normal 13px 'ClarendonBT-Light', Georgia, "Times New Roman", Times, serif;
+	letter-spacing: .2em;
+	margin: 14px 0;
+	text-transform: uppercase;
+}
+
+.magazine .interview dt {
+	color: #333;
+	display: inline;
+	margin-right: .3em;
+}
+
+.magazine .interview dt::before {
+	content: '.';
+	display: inline-block;
+	font-size: 0px;
+	height: 0;
+	opacity: 0;
+	width: 100%;
+}
+
+.magazine .interview dd {
+	color: #999;
+	display: inline;
+	margin: 14px 0;
+}
+
+.magazine .double-interview dl {
+	position: relative;
+}
+
+.magazine .double-interview dt {
+	clear: both;
+	float: none;
+}
+
+.magazine .double-interview dd {
+	float: left;
+	text-align: right;
+	margin: 0;
+	width: 47%;
+}
+
+.magazine .double-interview dd + dd,
+.magazine .double-interview dd.even {
+	margin-left: 6%;
+	text-align: left;
+}
+
+.magazine .double-interview dd.odd {
+	margin-left: 0 !important;
+	text-align: right !important;
+}
+
+.magazine .playlist h3 {
+	text-align: center;
+}
+
+.magazine .playlist ul {
+	list-style: none;
+	padding: 0;
+	text-align: center;
+}
+
+.magazine .playlist cite {
+	color: #999;
+	font-style: normal;
+}
+
+.magazine .sidebar ~ .articleContent {
+	width: 490px;
+}
+
+.magazine .sidebar.left ~ .articleContent {
+	float: right;
+}
+
+.magazine .sidebar ~ .articleContent .intro {
+	width: 100%;
+}
+
+.magazine .splitscreen {
+	width: 48%;
+}
+
+.magazine a {
+	color: #6699b0;
+	text-decoration: none;
+}
+
+.magazine a:hover,
+.magazine a:focus {
+	text-decoration: underline;
+}
+
+.magazine .byline::before {
+	content: '-';
+}
+
+.magazine .byline {
+	display: block;
+	font-style: normal;
+}
+
+.magazine .intro {
+	margin: auto;
+	width: 680px;
+}
+
+.magazine .intro p {
+	color: #666;
+	font: normal 16px/24px Georgia, "Times New Roman", Times, serif;
+	margin: 16px 0;
+}
+
+.magazine .body,
+.magazine .body p {
+	color: #999;
+	font: normal 13px/20px Arial, Helvetica, sans-serif;
+	margin: 12px 0;
+}
+
+.magazine .story {
+	margin-top: 20px;
+}
+
+.magazine .em {
+	color: #666;
+}
+
+.magazine blockquote {
+	margin: 16px 0;
+	text-align: center;
+}
+
+.magazine blockquote p {
+	color: #333;
+	margin: .8em 0;
+	font: normal 24px/32px Georgia, "Times New Roman", Times, serif !important;
+}
+
+.magazine blockquote p.first::before {
+	content: '\201C';
+	margin-left: -.5em;
+}
+
+.magazine blockquote p.last::after {
+	content: '\201D';
+	margin-right: -.5em;
+}
+
+.magazine .caption {
+	color: #666;
+	font: normal 14px/17px Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	margin-bottom: 1.1em;
+	text-align: center;
+}
+
+.magazine .caption em {
+	color: #333;
+	font-style: normal;
+}
+
+.magazine .recipe {
+	color: #666;
+	font: normal 13px 'ClarendonBT-Light', Georgia, "Times New Roman", Times, serif;
+	line-height: 1.5em;
+	margin: 2em 0;
+}
+
+.magazine .recipe b {
+	font-family: 'ClarendonBT-Roman', serif;
+	font-weight: normal;
+}
+
+.magazine .no-fontface .recipe b {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+}
+
+.magazine .recipe hgroup {
+	margin: 0 0 25px;
+}
+
+.magazine .recipe h3 {
+	font: normal 16px 'ClarendonBT-Light', Georgia, "Times New Roman", Times, serif;
+	letter-spacing: .1em;
+	margin: 0 0 .1em;
+	text-transform: none;
+}
+
+.magazine .recipe h4 {
+	color: inherit;
+	font: normal 13px 'ClarendonBT-Light', Georgia, "Times New Roman", Times, serif;
+	margin: 0;
+}
+
+.magazine .recipe .portion {
+	margin: 0 0 30px;
+}
+
+.magazine .recipe .servings {
+	/* there's a span wrapped around serving size info, but no current styling. ready for something later. */
+}
+
+.magazine .recipe ul {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 30px;
+}
+
+.magazine .recipe li {
+	line-height: 17px;
+	margin: 8px 0;
+}
+
+.magazine .recipe p {
+	color: #666;
+	line-height: 20px;
+}
+
+.magazine img.left {
+	float: left;
+	margin-right: 1.5em;
+}
+
+.magazine .note::before,
+.magazine .note-reference::after {
+	color: #d25952;
+	content: '*';
+}
+
+.magazine .signoff {
+	background-color: #989898;
+	background-image: url(/anthro/images/magazine_dingbat.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 13px;
+	margin-left: 5px;
+	position: relative;
+	top: 2px;
+	width: 13px;
+}
+
+
+/*========================
+	BODY COMPONENT STYLES
+==========================*/
+
+.magazine .shop-by-detail {
+	position: relative;
+}
+
+.magazine .shop-by-detail .sbd-item {
+	position: absolute;
+}
+
+.magazine .shop-by-detail a.sbd-item .target{
+	/*background-image: url(/anthro/images/+_14.png);*/
+	/*background-position: left top;*/
+	background-repeat: no-repeat;
+	/*height: 14px;*/
+	position: absolute;
+	text-indent: -9999px;
+	/*width: 14px;*/
+	z-index: 1;
+}
+
+/*.magazine .shop-by-detail a.sbd-item:hover .target,
+.magazine .shop-by-detail a.sbd-item:focus .target {
+	background-position: left bottom;
+}*/
+
+.magazine .shop-by-detail a.sbd-item .detail {
+	background-repeat: no-repeat;
+	position: absolute;
+	visibility: hidden;
+	z-index: 0;
+}
+
+.magazine .shop-by-detail a.sbd-item .detail.image-text {
+	text-indent: -9999px;	
+}
+
+.magazine .shop-by-detail a.sbd-item:hover .detail,
+.magazine .shop-by-detail a.sbd-item:focus .detail {
+	visibility: visible;
+}
+
+
+/*	Slideshow UI	*/
+.magazine .slideshow {
+	display: block;
+	margin: 15px auto;
+	overflow: hidden;
+	position: relative;
+	width: 800px;
+}
+
+.magazine .sub-content {
+	background: url(/anthro/images/a_magazine_content_divider.png) no-repeat top center;
+	margin-top: 50px;
+	padding-top: 50px;
+}
+
+.magazine .pagination {
+	list-style: none;
+	margin: 21px auto;
+	padding: 0;
+	text-align: center;
+}
+
+.magazine .pagination li {
+	color: #a09f9f;
+	display: inline;
+	font: normal 14px 'ClarendonBT-Light', Georgia, 'Times New Roman', Times, serif;
+	list-style: none;
+}
+
+.magazine .pagination li a {
+	outline: 1px solid #fff;
+	margin: 2px;
+	padding: .2em .5em;
+	text-decoration: none;
+}
+
+.magazine .pagination li,
+.magazine .pagination li a {
+	color: #333;
+}
+
+.magazine .pagination li a:hover,
+.magazine .pagination .current a {
+	outline-color: #bbd0d3;
+	text-decoration: none;
+}
+
+.magazine .pagination .current a {
+	background: #dde6e4;
+}
+
+.magazine .sequential.pagination {
+	bottom: 20px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	width: 40px;
+}
+
+.magazine .sequential.pagination li {
+	display: inline;
+	float: none;
+}
+
+.magazine .sequential.pagination #current::after {
+	content: '/';
+	margin: 0 0 0 .3em;
+}
+
+.magazine .sequential.pagination + .slide-next {
+	bottom: 20px;
+	display: block;
+	position: absolute;
+	text-align: center;
+	top: auto;
+	width: 40px;
+}
+
+/*	COPIED FROM MAGAZINE.CSS	*/
+.magazine .slideshow .slide-next,
+.magazine .slideshow .slide-prev {
+	color: #333;
+	display: none;
+	float: left;
+	font: normal 13px 'ClarendonBT-Light', Georgia, 'Times New Roman', Times, serif;
+	position: absolute;
+	top: 40%;
+	z-index: 101;
+}
+
+.magazine .slideshow .slide-prev {
+	left: 0;
+}
+		
+.magazine .slideshow .slide-next {
+	right: 0;
+}
+
+.magazine #slide-subtext p{
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 25px;
+	margin-top: 8px;
+	text-align: center;
+}
+/*	END OF MAGAINZE.CSS COPY	*/
+
+/*=================
+	MARKETING STYLES
+===================*/
+
+.magazine .marketing {
+	background: url(/anthro/images/a_magazine_footer_line.gif) no-repeat top;
+	float: left;
+	margin: 20px -58px;
+	padding: 20px 58px;
+	text-align: center;
+	width: 100%;
+}
+
+.magazine a.shop-box {
+	border: 1px solid #ccc;
+	display: inline-block;
+	*display: inline;
+	margin-left: 14px;
+	zoom: 1;
+}
+
+.magazine .sidebar a.shop-box {
+	float: right;
+	margin: 15px 0 0;
+}
+
+.magazine a.shop-box:first-child {
+	margin: 0px;
+}
+
+.magazine a.shop-box img {
+	border: 0;
+	border-bottom: 1px solid #ccc;
+	padding: 0;
+}
+
+.magazine a.shop-box .heading {
+	color: #333;
+	display: block;
+	font: normal 14px/17px Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	margin: 1em 0 .2em;
+	text-align: center;
+}
+
+.magazine a.shop-box .link {
+	color: #6699b0;
+	display: block;
+	font: normal 12px Georgia, "Times New Roman", Times, serif;
+	margin: 0 0 1em 1em;
+	text-decoration: none;
+	text-align: center;
+}
+
+.magazine a.shop-box:hover,
+.magazine a.shop-box:hover .heading {
+	text-decoration: none;
+}
+
+.magazine a.shop-box:hover .link {
+	text-decoration: underline;
+}
+
+.magazine a.shop-box .link::after {
+	content: ' >';
+}
+
+
+/*================
+	UTILITY STYLES
+==================*/
+
+.magazine .visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0); 
+	height: 1px;
+	margin: -1px;
+	overflow: hidden; 
+	padding: 0;
+	position: absolute; 
+	width: 1px; 
+}
+
+.magazine .hidden {
+	display: none;
+}
+
+.magazine .left {
+	float: left;
+}
+
+.magazine .right {
+	float: right;
+	text-align: left;
+}
+
+.magazine .nowrap {
+	white-space: nowrap;
+}

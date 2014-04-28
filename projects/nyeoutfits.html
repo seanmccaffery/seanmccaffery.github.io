@@ -1,0 +1,411 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<link href="anthro/styles/2013-magazine.css" rel="stylesheet">
+<style>
+
+#container {
+	width: 970px;
+	height: 600px;
+	margin: 0 auto;
+	position: relative;
+	left: -77px;
+	overflow: hidden;
+}
+
+#background {
+	position: relative;
+	top: -600px;
+	width: 1956px;
+	height: 600px;
+	left: -38px;
+	background: url('anthro/images/121712_back.jpg');
+	z-index: 1;
+}
+
+#girls {
+	position: relative;
+	width: 1956px;
+	height: 600px;
+	margin-left: 500px;
+	left: -76px;
+	background: url('anthro/images/121712_ladies.png');
+	z-index: 3;
+}
+
+#clock_container {
+	position: absolute;
+	top: 320px;
+	left: 140px;
+	width: 90px;
+	height: 175px;
+	background: url('anthro/images/121712_clock.png');
+	z-index: 2;
+}
+
+#hour {
+	position: relative;
+	left: 33px;
+	top: 65px;
+	-webkit-transform-origin: 100% 44%;
+	-webkit-transform:rotate(0deg);
+	-ms-transform-origin: 100% 44%;
+	-ms-transform:rotate(0deg);
+	-o-transform-origin: 100% 44%;
+	-o-transform:rotate(0deg);
+	-moz-transform-origin: 100% 44%;
+	-moz-transform:rotate(0deg);
+}
+
+#min {
+	position: relative;
+	left: 26px;
+	top: 60px;
+	-webkit-transform-origin: 40% 100%;
+	-webkit-transform:rotate(0deg);
+	-ms-transform-origin: 40% 100%;
+	-ms-transform:rotate(0deg);
+	-o-transform-origin: 40% 100%;
+	-o-transform:rotate(0deg);
+	-moz-transform-origin: 40% 100%;
+	-moz-transform:rotate(0deg);
+}
+
+#arrow_left {
+	float: left;
+	height: 600px;
+	width: 75px;
+	z-index: 50;
+	position: relative;
+}
+
+#arrow_right {
+	float: right;
+	height: 600px;
+	width: 75px;
+	z-index: 50;
+	position: relative;
+}
+
+.RO1 {
+	position: absolute;
+	width: 22px;
+	height: 21px;
+	background: url('anthro/images/121712_RO1.png') 0 0 no-repeat;
+}
+.RO1:hover {
+	background: url('anthro/images/121712_RO1.png') 0 -21px no-repeat;
+}
+.RO2 {
+	position: absolute;
+	width: 19px;
+	height: 18px;
+	background: url('anthro/images/121712_RO2.png') 0 0 no-repeat;
+}
+.RO2:hover {
+	background: url('anthro/images/121712_RO2.png') 0 -18px no-repeat;
+}
+.RO3 {
+	position: absolute;
+	width: 15px;
+	height: 14px;
+	background: url('anthro/images/121712_RO3.png') 0 0 no-repeat;
+}
+.RO3:hover {
+	background: url('anthro/images/121712_RO3.png') 0 -14px no-repeat;
+}
+.RO4 {
+	position: absolute;
+	width: 13px;
+	height: 16px;
+	background: url('anthro/images/121712_RO4.png') 0 0 no-repeat;
+}
+.RO4:hover {
+	background: url('anthro/images/121712_RO4.png') 0 -16px no-repeat;
+}
+
+#item1 {
+	left: 192px;
+	top: 244px;
+}
+
+#item2 {
+	left: 295px;
+	top: 67px;
+}
+
+#item3 {
+	left: 289px;
+	top: 165px;
+}
+
+#item4 {
+	left: 287px;
+	top: 434px;
+}
+
+#item5 {
+	left: 205px;
+	top: 559px;
+}
+
+#item6 {
+	left: 615px;
+	top: 247px;
+}
+
+#item7 {
+	left: 663px;
+	top: 130px;
+}
+
+#item8 {
+	left: 755px;
+	top: 302px;
+}
+
+#item9 {
+	left: 732px;
+	top: 434px;
+}
+
+#item10 {
+	left: 649px;
+	top: 560px;
+}
+
+#item11 {
+	left: 648px;
+	top: 281px;
+}
+
+#item12 {
+	left: 1136px;
+	top: 323px;
+}
+
+#item13 {
+	left: 1257px;
+	top: 193px;
+}
+
+#item14 {
+	left: 1171px;
+	top: 449px;
+}
+
+#item15 {
+	left: 1046px;
+	top: 460px;
+}
+
+#item16 {
+	left: 1625px;
+	top: 257px;
+}
+
+#item17 {
+	left: 1735px;
+	top: 110px;
+}
+
+#item18 {
+	left: 1770px;
+	top: 298px;
+}
+
+#item19 {
+	left: 1771px;
+	top: 317px;
+}
+
+#item20 {
+	left: 1650px;
+	top: 564px;
+}
+
+#mkt_link3 {
+	position: relative;
+	top: -13px;
+}
+
+</style>
+
+<script>
+
+jQuery(document).ready(function(){
+
+	var clockspeed = 0;
+	var movespeed = -38;
+	var movetoggle = 0;
+
+	function clockSpin() {
+		//Spin
+		if (movespeed <= -150 && movespeed >= -234) {
+			jQuery('#min').css('-webkit-transform', 'rotate(0deg)');
+			jQuery('#hour').css('-webkit-transform', 'rotate(0deg)');
+			jQuery('#min').css('-ms-transform', 'rotate(0deg)');
+			jQuery('#hour').css('-ms-transform', 'rotate(0deg)');
+			jQuery('#min').css('-o-transform', 'rotate(0deg)');
+			jQuery('#hour').css('-o-transform', 'rotate(0deg)');
+			jQuery('#min').css('-moz-transform', 'rotate(0deg)');
+			jQuery('#hour').css('-moz-transform', 'rotate(0deg)');
+		}else if (movespeed <= -350 && movespeed >= -495) {
+			jQuery('#min').css('-webkit-transform', 'rotate(0deg)');
+			jQuery('#hour').css('-webkit-transform', 'rotate(22deg)');
+			jQuery('#min').css('-ms-transform', 'rotate(0deg)');
+			jQuery('#hour').css('-ms-transform', 'rotate(22deg)');
+			jQuery('#min').css('-o-transform', 'rotate(0deg)');
+			jQuery('#hour').css('-o-transform', 'rotate(22deg)');
+			jQuery('#min').css('-moz-transform', 'rotate(0deg)');
+			jQuery('#hour').css('-moz-transform', 'rotate(22deg)');
+		}else if (movespeed <= -590 && movespeed >= -705) {
+			jQuery('#min').css('-webkit-transform', 'rotate(0deg)');
+			jQuery('#hour').css('-webkit-transform', 'rotate(60deg)');
+			jQuery('#min').css('-ms-transform', 'rotate(0deg)');
+			jQuery('#hour').css('-ms-transform', 'rotate(60deg)');
+			jQuery('#min').css('-o-transform', 'rotate(0deg)');
+			jQuery('#hour').css('-o-transform', 'rotate(60deg)');
+			jQuery('#min').css('-moz-transform', 'rotate(0deg)');
+			jQuery('#hour').css('-moz-transform', 'rotate(60deg)');
+		}else if (movespeed <= -825) {
+			jQuery('#min').css('-webkit-transform', 'rotate(0deg)');
+			jQuery('#hour').css('-webkit-transform', 'rotate(90deg)');
+			jQuery('#min').css('-ms-transform', 'rotate(0deg)');
+			jQuery('#hour').css('-ms-transform', 'rotate(90deg)');
+			jQuery('#min').css('-o-transform', 'rotate(0deg)');
+			jQuery('#hour').css('-o-transform', 'rotate(90deg)');
+			jQuery('#min').css('-moz-transform', 'rotate(0deg)');
+			jQuery('#hour').css('-moz-transform', 'rotate(90deg)');
+		}else {
+			clockspeed += 1;
+			jQuery('#min').css('-webkit-transform', 'rotate('+clockspeed*6+'deg)');
+			jQuery('#hour').css('-webkit-transform', 'rotate('+clockspeed+'deg)');
+			jQuery('#min').css('-ms-transform', 'rotate('+clockspeed*6+'deg)');
+			jQuery('#hour').css('-ms-transform', 'rotate('+clockspeed+'deg)');
+			jQuery('#min').css('-o-transform', 'rotate('+clockspeed*6+'deg)');
+			jQuery('#hour').css('-o-transform', 'rotate('+clockspeed+'deg)');
+			jQuery('#min').css('-moz-transform', 'rotate('+clockspeed*6+'deg)');
+			jQuery('#hour').css('-moz-transform', 'rotate('+clockspeed+'deg)');
+		}
+	}
+
+	jQuery('#arrow_left').mouseenter(function() {
+		movetoggle = 1;
+	});
+
+	jQuery('#arrow_left').mouseleave(function() {
+		movetoggle = 0;
+	});
+
+	jQuery('#arrow_right').mouseenter(function() {
+		movetoggle = 2;
+	});
+
+	jQuery('#arrow_right').mouseleave(function() {
+		movetoggle = 0;
+	});
+
+	function move() {
+
+		if (movetoggle == 1) {
+			if (movespeed <= -45) {
+				movespeed += 2;
+				jQuery('#background').css("left", movespeed);
+				jQuery('#girls').css("left", movespeed*2);
+			}
+		}
+
+		if (movetoggle == 2) {
+			if (movespeed >= -866) {
+				movespeed -= 2;
+				jQuery('#background').css("left", movespeed);
+				jQuery('#girls').css("left", movespeed*2);
+			}
+		}
+		
+	}
+
+	setInterval(function() {
+		clockSpin()
+		move()
+	}, 17);
+
+});
+
+</script>
+
+<article class="magazine">
+
+	<header>
+		<h1 class="feature-title">
+			<span class="type">outfits</span> 
+			New Year's Eve
+		</h1>
+	</header>
+
+	<!-- MAIN CONTENT -->
+	<div class="content">
+		<div class="intro">
+			<p>Certain holidays simply require a little bit of dressing up, and New Year's Eve is one of them: no matter your plans for the evening, throw on something a bit fancy (like these four party-ready looks) to ring in the new year in true style.</p>
+		</div>
+
+		<div class="articleContent">
+			
+			<div id="container">
+				<div id="arrow_left"></div>
+				<div id="arrow_right"></div>
+				<div id="girls">
+					<!--Outfit 1-->
+					<a href="javascript:openDetailsPopup('26244871','121712nyeoutfits_mag')" id="item1" class="RO1"></a>
+					<a href="javascript:openDetailsPopup('26470476','121712nyeoutfits_mag')" id="item2" class="RO3"></a>
+					<a href="javascript:openDetailsPopup('26790717','121712nyeoutfits_mag')" id="item3" class="RO4"></a>
+					<a href="javascript:openDetailsPopup('25539735','121712nyeoutfits_mag')" id="item4" class="RO2"></a>
+					<a href="javascript:openDetailsPopup('24650962','121712nyeoutfits_mag')" id="item5" class="RO3"></a>
+					<!--Outfit 2-->
+					<a href="javascript:openDetailsPopup('26007153','121712nyeoutfits_mag')" id="item6" class="RO1"></a>
+					<a href="javascript:openDetailsPopup('26708545','121712nyeoutfits_mag')" id="item7" class="RO4"></a>
+					<a href="javascript:openDetailsPopup('26468504','121712nyeoutfits_mag')" id="item8" class="RO4"></a>
+					<a href="javascript:openDetailsPopup('25756479','121712nyeoutfits_mag')" id="item9" class="RO2"></a>
+					<a href="javascript:openDetailsPopup('25924911','121712nyeoutfits_mag')" id="item10" class="RO3"></a>
+					<a href="javascript:openDetailsPopup('26881391','121712nyeoutfits_mag')" id="item11" class="RO3"></a>
+					<!--Outfit 3-->
+					<a href="javascript:openDetailsPopup('25966532','121712nyeoutfits_mag')" id="item12" class="RO2"></a>
+					<a href="javascript:openDetailsPopup('25941683','121712nyeoutfits_mag')" id="item13" class="RO3"></a>
+					<a href="javascript:openDetailsPopup('25541392','121712nyeoutfits_mag')" id="item14" class="RO4"></a>
+					<a href="javascript:openDetailsPopup('26166165','121712nyeoutfits_mag')" id="item15" class="RO2"></a>
+					<!--Outfit 4-->
+					<a href="javascript:openDetailsPopup('26226449','121712nyeoutfits_mag')" id="item16" class="RO1"></a>
+					<a href="javascript:openDetailsPopup('26938043','121712nyeoutfits_mag')" id="item17" class="RO4"></a>
+					<a href="javascript:openDetailsPopup('26527556','121712nyeoutfits_mag')" id="item18" class="RO4"></a>
+					<a href="javascript:openDetailsPopup('26396150','121712nyeoutfits_mag')" id="item19" class="RO3"></a>
+					<a href="javascript:openDetailsPopup('25403668','121712nyeoutfits_mag')" id="item20" class="RO3"></a>
+				</div>
+				<div id="background"></div>
+			</div>
+			<div id="clock_container">
+				<img id="hour" src="anthro/images/121712_hour.png">
+				<img id="min" src="anthro/images/121712_min.png">
+			</div>		
+
+		</div>
+
+		<section class="marketing">
+			<a href="#" onclick="cmCreatePageElementTag('dress','121712nyeoutfits_mag')" class="shop-box">
+				<img src="anthro/images/121712_LINK_Dress.jpg" alt="Dresses">
+				<span class="heading">dresses, dresses everywhere</span>
+				<span class="link">see every last one</span>
+				<br />
+			</a>
+			<a href="#" onclick="cmCreatePageElementTag('nye_cocktails_mag','121712nyeoutfits_mag')" class="shop-box">
+				<img src="anthro/images/121712_LINK_cocktail.jpg" alt="NYE Cocktails">
+				<span class="heading">want to toast with something new?</span>
+				<span class="link">give these cocktail recipes a try</span>
+				<br />
+			</a>
+			<a id="mkt_link3" href="#" onclick="cmCreatePageElementTag('ps','121712nyeoutfits_mag')" class="shop-box">
+				<img src="anthro/images/121712_LINK_PS.jpg" alt="Personal Shopper">
+				<span class="heading">need more night-out outfit ideas?</span>
+				<span class="link">book a complimentary appointment<br /> with our personal shopper</span>
+			</a>						
+		</section>
+	</div>
+</article>

@@ -1,0 +1,356 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<link href="anthro/styles/2013-magazine.css" rel="stylesheet">
+<style>
+
+.magazine .intro {
+	width: 800px;
+}
+
+#container {
+	width: 970px;
+	height: 600px;
+	margin: 0 auto;
+	padding-bottom: 25px;
+	position: relative;
+	left: -77px;
+	overflow: hidden;
+}
+
+#background1 {
+	position: relative;
+	width: 970px;
+	height: 600px;
+	z-index: 1;
+}
+
+#bkg1 {
+	position: relative;
+	top: -600px;
+	z-index: 50;
+}
+
+#background2 {
+	position: relative;
+	width: 970px;
+	height: 600px;
+	left: -970px;
+	top: -600px;
+	z-index: 1;
+}
+
+.color {
+	position: absolute;
+	z-index: 50;
+}
+
+#arrow {
+	float: right;
+	height: 600px;
+	width: 75px;
+	z-index: 50;
+	position: relative;
+	background: url('anthro/images/010313_resort_mag_arrow.png') 35px 290px no-repeat;
+}
+
+.looks {
+	position: absolute;
+	z-index: 60;
+	width: 150px;
+	line-height: 16px;
+}
+
+.looks p {
+	color: #198086;
+	font-family: Arial;
+	font-size: 11px;
+	margin-bottom: 4px;
+}
+
+.looks a {
+	color: #838788;
+	font-family: Georgia;
+	font-size: 11px;
+}
+
+#looks1 a:hover {
+	color: #198086;
+}
+
+#looks1 {
+	top: 415px;
+	left: 390px;
+}
+
+#looks2 {
+	top: 120px;
+	left: 770px;
+}
+
+#looks2 p, #looks2 a:hover {
+	color: #E15757;
+}
+
+#looks3 {
+	top: 280px;
+	left: 330px;
+}
+
+#looks3 p, #looks3 a:hover {
+	color: #C154C9;
+}
+
+#looks4 {
+	top: 345px;
+	left: 805px;
+}
+
+#looks4 p, #looks4 a:hover {
+	color: #CB4138;
+}
+
+</style>
+
+<script>
+
+jQuery(document).ready(function(){
+
+	var toggle = 0;
+
+	//Move Slides
+	jQuery('#arrow').click(function() {
+		if(toggle == 0) {
+			jQuery('#background1').animate({
+				left: "-970px"
+			}, 500, function() {
+
+			});
+			jQuery('#background2').animate({
+				left: "0px"
+			}, 500, function() {
+				toggle = 1;
+			});
+		}else {
+			jQuery('#background1').animate({
+				left: "0px"
+			}, 500, function() {
+
+			});
+			jQuery('#background2').animate({
+				left: "-970px"
+			}, 500, function() {
+				toggle = 0;
+			});
+		}
+	});
+
+	//Initial Color
+	jQuery('#color11').animate({
+		opacity: 1
+	}, 2500, function() {
+		jQuery('#color11').animate({
+			opacity: 0
+		}, 1500, function() {
+			jQuery('#color11').css("display", "none");
+		});
+	});
+
+	//Add Color Bg1
+	jQuery('#area11').hover(function() {
+		jQuery('#color11').css("display", "block");
+		jQuery('#color11').animate({
+			opacity: 1
+		}, 1500);
+	});
+
+	jQuery('#area12').hover(function() {
+		jQuery('#color12').css("display", "block");
+		jQuery('#color12').animate({
+			opacity: 1
+		}, 1500);
+	});
+
+	jQuery('#area11').hover(function() {
+		jQuery('#color13').css("display", "block");
+		jQuery('#color13').animate({
+			opacity: 1
+		}, 1500);
+	});
+
+	jQuery('#area13').hover(function() {
+		jQuery('#color13').css("display", "block");
+		jQuery('#color13').animate({
+			opacity: 1
+		}, 1500);
+	});
+
+	jQuery('#area14').hover(function() {
+		jQuery('#color14').css("display", "block");
+		jQuery('#color14').animate({
+			opacity: 1
+		}, 1500);
+	});
+
+	jQuery('#area1b1').hover(function() {
+		jQuery('#color1b1').css("display", "block");
+		jQuery('#color1b1').animate({
+			opacity: 1
+		}, 1500);
+	});
+
+	jQuery('#area1b2').hover(function() {
+		jQuery('#color1b2').css("display", "block");
+		jQuery('#color1b2').animate({
+			opacity: 1
+		}, 1500);
+	});
+
+	//Add Color Bg2
+	jQuery('#area21').hover(function() {
+		jQuery('#color21').css("display", "block");
+		jQuery('#color21').animate({
+			opacity: 1
+		}, 1500);
+	});
+
+	jQuery('#area22').hover(function() {
+		jQuery('#color22').css("display", "block");
+		jQuery('#color22').animate({
+			opacity: 1
+		}, 1500);
+	});
+
+	jQuery('#area2b1').hover(function() {
+		jQuery('#color2b1').css("display", "block");
+		jQuery('#color2b1').animate({
+			opacity: 1
+		}, 1500);
+	});
+
+	jQuery('#area2b2').hover(function() {
+		jQuery('#color2b2').css("display", "block");
+		jQuery('#color2b2').animate({
+			opacity: 1
+		}, 1500);
+	});
+
+	jQuery('#area2b3').hover(function() {
+		jQuery('#color2b3').css("display", "block");
+		jQuery('#color2b3').animate({
+			opacity: 1
+		}, 1500);
+	});
+
+});
+
+</script>
+
+<article class="magazine">
+
+	<header>
+		<h1 class="feature-title">
+			<span class="type">outfits</span> 
+			Resort
+		</h1>
+	</header>
+
+	<!-- MAIN CONTENT -->
+	<div class="content">
+		<div class="intro">
+			<p>Yes, it's winter. But that little fact won't keep us from daydreaming about (and, if we're lucky, packing up and visiting) some warm-weather locales. These four looks fit right into our fantasizing&mdash;everything from floaty dresses to retro swimwear makes an appearance. Now, pardon us while we imagine what the view would be like from a seaside chaise lounge...</p>
+		</div>
+
+		<div class="articleContent">
+			
+			<div id="container">
+				<a id="arrow"></a>
+				<div id="background1">
+					<img id="bkg1" usemap="#bg1" src="anthro/images/010313_resort_mag_bkg1.jpg">
+					<map name="bg1">
+						<!--Colors-->
+						<area id="area1b2" href="#" shape="poly" coords="731,287,749,323,770,319,784,272,792,276,827,340,788,411,808,408,794,438,821,452,810,474,824,497,785,515,770,533,776,553,789,567,787,599,730,601,734,572,730,542,692,572,679,550,671,513,739,420,731,287" alt="" />
+						<area id="area1b1" href="#" shape="poly" coords="609,139,587,88,555,222,576,245,592,362,543,352,528,403,561,410,563,429,548,475,561,521,621,586,653,586,659,560,622,511,642,479,620,460,637,431,635,378,611,364,627,332,614,302,621,284,617,249,601,219,608,174,609,139" alt="" />
+						<area id="area14" href="#" shape="poly" coords="258,61,269,48,294,61,311,29,320,33,319,61,328,55,341,28,370,53,343,94,345,103,317,144,310,173,289,137,270,100,263,96,258,61" alt="" />
+						<area id="area13" href="#" shape="poly" coords="138,387,171,402,177,430,177,496,161,508,122,496,119,472,131,459,126,444,134,421,128,402,138,387" alt="" />
+						<area id="area12" href="#" shape="poly" coords="250,244,310,182,316,147,423,146,437,199,375,262,337,265,323,302,325,338,341,325,434,313,387,352,345,364,394,369,411,367,410,379,344,391,338,449,316,497,372,448,379,454,373,470,294,528,285,518,277,517,264,500,254,425,266,424,271,417,259,365,251,318,250,244" alt="" />
+						<area id="area11" href="#" shape="poly" coords="-1,200,31,205,57,250,50,219,62,207,98,204,110,211,122,213,134,211,128,165,145,186,146,198,143,211,153,230,158,242,153,313,131,364,143,382,139,388,125,411,132,429,118,479,54,485,21,445,-1,341,-1,200" alt="" />
+					</map>
+					<!--Color Images-->
+					<img id="color11" style="top: 156px; opacity: 0;" class="color" src="anthro/images/010313_resort_mag_bkg1_color1.png" />
+					<img id="color12" style="top: 129px; left: 202px; opacity: 0; display: none;" class="color" src="anthro/images/010313_resort_mag_bkg1_color2.png" />
+					<img id="color13" style="top: 345px; left: 121px; opacity: 0; display: none;" class="color" src="anthro/images/010313_resort_mag_bkg1_color3.png" />
+					<img id="color14" style="top: 25px; left: 255px; opacity: 0; display: none;" class="color" src="anthro/images/010313_resort_mag_bkg1_color4.png" />
+					<img id="color1b1" style="top: 85px; left: 524px; opacity: 0; display: none;" class="color" src="anthro/images/010313_resort_mag_bkg1_color1b.png" />
+					<img id="color1b2" style="top: 238px; left: 657px; opacity: 0; display: none;" class="color" src="anthro/images/010313_resort_mag_bkg1_color2b.png" />
+					<!--Links-->
+					<div id="looks1" class="looks">
+						<p>LOOK 1:</p>
+						<a href="javascript:openDetailsPopup('27018399','010413resort_mag')">Embellished Kaftan Cover-Up</a><br />
+						<a href="javascript:openDetailsPopup('26639492','010413resort_mag')">Kabuto Tasseled Cuff</a><br />
+						<a href="javascript:openDetailsPopup('26853176','010413resort_mag')">Studded Corners Bangle</a><br />
+						<a href="javascript:openDetailsPopup('26434829','010413resort_mag')">Socoa Sandals</a>
+					</div>
+					<div id="looks2" class="looks">
+						<p>LOOK 2:</p>
+						<a href="javascript:openDetailsPopup('26785899','010413resort_mag')">Skikda Beach Tunic</a><br />
+						<a href="javascript:openDetailsPopup('26561845','010413resort_mag')">Painted Current Shorts</a><br />
+						<a href="javascript:openDetailsPopup('26744029','010413resort_mag')">Castellane Layer Necklace</a><br />
+						<a href="javascript:openDetailsPopup('26434332','010413resort_mag')">Brittany Sandals</a>
+					</div>
+				</div>
+				<div id="background2">
+					<img id="bkg2" usemap="#bg2" src="anthro/images/010313_resort_mag_bkg2.jpg">
+					<map name="bg2">
+						<!--Colors-->
+						<area id="area2b3" href="#" shape="poly" coords="655,321,633,310,594,325,558,317,522,257,519,219,526,173,578,170,618,212,631,169,663,170,655,321" alt="" />
+						<area id="area2b2" href="#" shape="poly" coords="658,332,670,377,670,391,708,411,726,436,714,445,658,439,654,496,648,509,611,465,611,441,553,488,543,479,568,426,525,380,584,368,512,332,523,319,603,329,636,322,658,332" alt="" />
+						<area id="area2b1" href="#" shape="poly" coords="751,107,769,105,781,88,842,87,859,103,835,137,852,150,833,162,867,198,865,212,881,245,869,252,895,283,903,321,824,281,820,320,779,364,770,329,778,319,759,219,747,143,751,107" alt="" />
+						<area id="area22" href="#" shape="poly" coords="275,405,248,388,268,348,279,352,337,357,365,391,348,413,325,421,324,429,363,429,373,449,372,463,335,470,310,466,313,491,339,481,371,483,369,515,343,495,308,536,285,539,273,570,261,577,282,589,281,600,229,599,249,560,280,533,289,509,286,483,304,410,275,405" alt="" />
+						<area id="area21" href="#" shape="poly" coords="172,33,146,0,103,-1,82,85,68,80,50,127,67,164,32,180,18,212,0,214,2,229,40,233,75,203,74,231,61,231,46,270,-1,279,0,339,9,350,4,371,27,354,22,340,48,340,59,349,96,390,108,376,118,349,105,322,113,313,120,270,120,219,120,177,112,166,147,146,150,115,172,33" alt="" />
+					</map>
+					<!--Color Images-->
+					<img id="color21" style="top: 0px; left: 0px; opacity: 0; display: none;" class="color" src="anthro/images/010313_resort_mag_bkg2_color1.png" />
+					<img id="color22" style="top: 342px; left: 222px; opacity: 0; display: none;" class="color" src="anthro/images/010313_resort_mag_bkg2_color2.png" />
+					<img id="color2b1" style="top: 75px; left: 719px; opacity: 0; display: none;" class="color" src="anthro/images/010313_resort_mag_bkg2_color1b.png" />
+					<img id="color2b2" style="top: 319px; left: 504px; opacity: 0; display: none;" class="color" src="anthro/images/010313_resort_mag_bkg2_color2b.png" />
+					<img id="color2b3" style="top: 155px; left: 506px; opacity: 0; display: none;" class="color" src="anthro/images/010313_resort_mag_bkg2_color3b.png" />
+					<!--Links-->
+					<div id="looks3" class="looks">
+						<p>LOOK 3:</p>
+						<a href="javascript:openDetailsPopup('26183640','010413resort_mag')">Costa Tropical Bikini Top</a><br />
+						<a href="javascript:openDetailsPopup('26183681','010413resort_mag')">Costa Tropical Bikini Bottoms</a><br />
+						<a href="javascript:openDetailsPopup('26558080','010413resort_mag')">Interval Sparkle Cuff</a>
+					</div>
+					<div id="looks4" class="looks">
+						<p>LOOK 4:</p>
+						<a href="javascript:openDetailsPopup('26826073','010413resort_mag')">Marlena Dress</a><br />
+						<a href="javascript:openDetailsPopup('26386086','010413resort_mag')">Tortola Floppy Hat</a><br />
+						<a href="javascript:openDetailsPopup('26634089','010413resort_mag')">Hammer-Split Brass Cuff</a><br />
+						<a href="javascript:openDetailsPopup('26434670','010413resort_mag')">Rosegold Sandals</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<section class="marketing">
+			<a href="#" onclick="cmCreatePageElementTag('swimwear','010413resort_mag')" class="shop-box">
+				<img src="anthro/images/122812_resort_magazine_linkout2.jpg" alt="Shop Swimwear & Cover-Ups">
+				<span class="heading">from poolside to seaside</span>
+				<span class="link" style="margin: 0 0 1em 0em;">shop swimwear & cover-ups</span>
+				<br />
+			</a>
+			<a href="#" class="shop-box">
+				<img src="anthro/images/122812_resort_magazine_linkout1.jpg" alt="NYE Cocktails">
+				<span class="heading">pack your bags</span>
+				<span class="link">shop our full resort collection</span>
+				<br />
+			</a>
+			<a href="#" onclick="cmCreatePageElementTag('ps','010413resort_mag')" class="shop-box">
+				<img src="anthro/images/122812_resort_magazine_linkout3.jpg" alt="Personal Shopper">
+				<span class="heading">get styled before you go</span>
+				<span class="link" style="margin: 0;">book a free consultation<br /> with our online personal shopper</span>
+				<br />
+			</a>				
+		</section>
+	</div>
+</article>

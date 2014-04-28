@@ -1,0 +1,189 @@
+<style>
+.slots {
+  padding-top: 40px;
+}
+
+/* Interactive */
+.slider {
+  background: url(anthro/images/071813_20for20_interactive_background.jpg) no-repeat;
+  cursor: pointer;
+  height: 531px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  position: relative;
+  top: 50%;
+  overflow: hidden;
+  width: 1200px;
+}
+
+.slider:hover .content {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.slider:hover .paused {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-animation: fade 2s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+  animation: fade 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+.title {
+  background: url(anthro/images/071813_20for20_interactive2_begining.png);
+  height: 377px;
+  left: 494px;
+  top: 83px;
+  position: absolute;
+  width: 212px;
+  z-index: 99;
+  -webkit-animation: fade 2s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+  animation: fade 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+.corner_title {
+  background: url(anthro/images/071813_20for20_interactive2_corner.png);
+  height: 61px;
+  left: 44px;
+  position: absolute;
+  top: 531px;
+  width: 150px;
+  z-index: 1;
+  -webkit-animation: slideup ease-out 3s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-delay: 3s;
+  animation: slideup ease-out 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+
+.paused {
+	display: none;
+  color: white;
+  font-family: Helvetica;
+  font-size: 1.4em;
+  font-weight: bold;
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  left: 1100px;
+  top: 500px;
+}
+
+.content {
+  color: white;
+  height: 531px;
+  position: relative;
+  width: 6169px;
+  z-index: 10;
+  -webkit-animation: move linear infinite 50s;
+  animation: move linear infinite 50s;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.slider:hover .content2 {
+	opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.content2 {
+	opacity: 0;
+  filter: alpha(opacity=0);
+	top: -531px;
+	clear: both;
+}
+
+@-webkit-keyframes move {
+  from {
+    left: 1300px;
+  }
+  to {
+    left: -6169px;
+  }
+}
+
+@keyframes move {
+  from {
+    left: 1200px;
+  }
+  to {
+    left: -6169px;
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  to {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  to {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+
+@-webkit-keyframes slideup {
+  from {
+    top: 400px; /* 531 for slide anim */
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  to {
+    top: 400px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+}
+
+@keyframes slideup {
+  from {
+    top: 400px; /* 531 for slide anim */
+  }
+  to {
+    top: 400px;
+  }
+}
+
+@media all and (max-width: 1480px) {
+  .slider {
+    width: 970px;
+  }
+  .title {
+    left: 379px;
+  }
+}
+</style>
+<div class="slots visuallyhidden">
+	<div class="slot2">
+		<div class="slider">
+			<h1 class="title"></h1>
+	    <h2 class="corner_title"></h2>
+		  <div class="paused">paused</div>
+		  <div class="content1 content">
+			  <img src="anthro/images/Interactive_Slice_v3_Images.png" alt="">
+		  </div>
+		  <div class="content2 content">
+			  <img src="anthro/images/Interactive_Slice_v3_Labels.png" alt="">
+		  </div>
+		</div>
+	</div>
+</div>
